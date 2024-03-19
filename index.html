@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lieferando</title>
+        <script src="/Lieferando/script.js"></script>
+        <link rel="stylesheet" href="/Lieferando/style.css" />
+        <link rel="stylesheet" href="/Lieferando/rensponsive.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="icon" href="/Lieferando/img/sebirando.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    </head>
+    <body onload="render()">
+        <header>
+            <img src="/Lieferando/img/sebirando.png" alt="logo" class="lieferando-logo" />
+            <h3>Speisekarte</h3>
+            <div>
+                <img src="/Lieferando/img/german.png" alt="german" class="header-icons" />
+                <img src="/Lieferando/img/menu.png" alt="menu" class="header-icons" />
+            </div>
+        </header>
+        <div class="content">
+            <div class="restaurant-content">
+                <img src="/Lieferando/img/header-img.jpg" alt="sushi" class="title-img" />
+                <div id="restaurant-container">
+                    <div id="restaurant-info">
+                        <img src="/Lieferando/img/gasha-sushi-bar-logo.png" alt="sushibar-logo" class="sushibar-logo" />
+                        <div class="restaurant">
+                            Sushibar Geisha
+                            <div class="like-and-info">
+                                <img src="/Lieferando/img/information.png" alt="information" class="like-and-info-button" />
+                                <img src="/Lieferando/img/heart-red.png" alt="like" class="like-and-info-button" />
+                            </div>
+                        </div>
+                        <div class="restaurant-reviews">
+                            <img src="/Lieferando/img/star-24.png" alt="star" />
+                            <img src="/Lieferando/img/star-24.png" alt="star" />
+                            <img src="/Lieferando/img/star-24.png" alt="star" />
+                            <img src="/Lieferando/img/star-24.png" alt="star" />
+                            <img src="/Lieferando/img/star-24.png" alt="star" />
+                            <p class="reviews-font">3k Bewertungen</p>
+                        </div>
+                        <div id="filterContainer">
+                            <img src="img/magnifier.png" alt="search" id="searchIcon" onclick="openSearchField()" />
+                            <div id="dishListMainContainer">
+                                <img src="img/Left_arrow.svg.png" alt="leftArrow" class="listArrows" onclick="scrollListItemsLeft()" />
+                                <div id="dishListContainer"></div>
+                                <img src="img/Right_arrow.svg.png" alt="rightArrow" class="listArrows" onclick="scrollListItemsRight()" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menuContainer">
+                    <div id="restaurant-menu"></div>
+                </div>
+            </div>
+            <div id="basket-container" class="d-none">
+                <div class="basket">
+                    <p class="basket-headline">Warenkorb</p>
+                    <div id="delivery-options">
+                        <div class="delivery-options">
+                            <div id="delivery" class="white-background" onclick="choseDeliveryOption()">
+                                <img src="/Lieferando/img/bike.png" alt="bike" class="bike" />
+                                <div>
+                                    <p class="delivery-options-text"><b>Lieferung</b></p>
+                                    <p class="delivery-options-text">20-25 Min</p>
+                                </div>
+                            </div>
+                            <div id="pick-up" onclick="choosePickUpOption()">
+                                <img src="/Lieferando/img/pick-up.png" alt="bike" class="bike" />
+                                <div>
+                                    <p class="delivery-options-text"><b>Abholung</b></p>
+                                    <p class="delivery-options-text">15 Min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="basketButtonContainer"></div>
+        <footer></footer>
+    </body>
+</html>
